@@ -1,0 +1,17 @@
+{
+  "name": "cnd-dashboard-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "scs-dashboard/artifacts/scs-dashboard",
+    "lib/*"
+  ],
+  "scripts": {
+    "install:all": "pnpm install",
+    "dev:scs": "pnpm --filter @workspace/scs-dashboard dev",
+    "typecheck:scs": "pnpm --filter @workspace/scs-dashboard run typecheck"
+  },
+  "devDependencies": {
+    "pnpm": "^8.0.0"
+  }
+}
